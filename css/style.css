@@ -392,6 +392,7 @@ body {
         justify-content: center;
         margin: 0;
         margin-bottom: 250px;
+        max-height: 55vh;
 
     }
 
@@ -426,7 +427,7 @@ body {
 
 @media (max-width:400px) {
     .card {
-        max-width: 64vw;
+        max-width: 84vw;
         max-height: 55vh;
     }
 
