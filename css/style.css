@@ -41,6 +41,12 @@ body {
 
 }
 
+.currentSong {
+    background-color: #33a15a;
+    color: #000;
+    font-weight: 600;
+}
+
 .library {
     min-height: 80vh;
     position: relative;
@@ -92,6 +98,7 @@ body {
 
 .spotifyPlaylists {
     padding: 16px;
+    height: 84vh;
 }
 
 #cardContainer {
@@ -99,8 +106,9 @@ body {
     gap: 10px;
     flex-wrap: wrap;
     margin: 30px;
-    max-height: 75vh;
+    max-height: 65vh;
     overflow-y: scroll;
+    margin-bottom: 250px;
 }
 
 .card {
@@ -136,6 +144,7 @@ body {
     cursor: pointer;
     --a: 1;
 }
+
 
 .play {
     height: 28px;
@@ -382,6 +391,8 @@ body {
     #cardContainer {
         justify-content: center;
         margin: 0;
+        margin-bottom: 250px;
+
     }
 
     .abovebar {
@@ -417,6 +428,10 @@ body {
     .card {
         max-width: 64vw;
         max-height: 55vh;
+    }
+
+    #cardContainer {
+        margin-bottom: 250px;
     }
 
     .left {

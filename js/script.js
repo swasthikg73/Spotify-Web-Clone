@@ -65,7 +65,7 @@ async function getSongs(folder) {
     e.addEventListener("click", (element) => {
       playMusic(e.querySelector(".info").firstElementChild.innerHTML.trim());
       // playMusic(e);
-      updateIcon(e);
+      // updateIcon(e);
     });
   });
   return Allsongs;
@@ -185,6 +185,20 @@ async function main() {
 let currentSong = new Audio();
 const playMusic = (track, pause = false) => {
   console.log("Track :", track);
+
+  //  Add Css to current Song
+  Array.from(document.querySelectorAll(".songList ul li")).forEach((e) => {
+    const songName = e.querySelector(".songName");
+    const span = e.querySelector(".playnow span");
+
+    if (songName && songName.innerHTML.trim() === track) {
+      span.innerHTML = "Playing";
+      e.classList.add("currentSong");
+    } else {
+      span.innerHTML = "Play Now";
+      e.classList.remove("currentSong");
+    }
+  });
 
   document.querySelector(".playbar").style.opacity = "1";
   currentSong.src = `/songs/${currFolder}/` + track;
